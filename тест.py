@@ -2,10 +2,12 @@ import pygame
 import math
 pygame.init()
 screen = pygame.display.set_mode((1200, 800))
+#цвета
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 
-#задник
+
+#задник константы
 r1 = pygame.Rect(0, 0, 1200, 100)
 r2 = pygame.Rect(0, 150, 1200, 100)
 r3 = pygame.Rect(0, 100, 1200, 50)
@@ -14,6 +16,7 @@ r5 = pygame.Rect(0, 400, 1200, 100)
 r6 = pygame.Rect(0, 500, 1200, 300)
 pi = 3.14
 
+
 #задник
 pygame.draw.rect(screen, (20, 47, 200), r1, 0)
 pygame.draw.rect(screen, (200, 165, 200), r2, 0)
@@ -21,6 +24,7 @@ pygame.draw.rect(screen, (161, 165, 200), r3, 0)
 pygame.draw.rect(screen, (199, 118, 147), r4, 0)
 pygame.draw.rect(screen, (199, 115, 20), r5, 0)
 pygame.draw.rect(screen, (82, 134, 199), r6, 0)
+
 
 #чайки
 pi = 3.14
@@ -39,6 +43,7 @@ pygame.draw.ellipse(screen, WHITE, (700, 540, 100, 60))
 pygame.draw.ellipse(screen, WHITE, (700, 540, 100, 60))
 pygame.draw.ellipse(screen, BLACK, (750, 550, 20, 10))
 
+
 #ноги
 image1 = pygame.Surface((300, 300))
 image1.fill ((0,255,255))
@@ -47,12 +52,14 @@ pygame.draw.ellipse(image1, WHITE, (10,10,100,50), 0)
 new_image1 = pygame.transform.rotate(image1, 300)
 screen.blit(new_image1, (280, 600))
 
+
 image2 = pygame.Surface((300, 300))
 image2.fill ((0,255,255))
 image2.set_colorkey((0,255,255))
 pygame.draw.ellipse(image2, WHITE, (10,10,100,30), 0)
 new_image2 = pygame.transform.rotate(image2, 340)
 screen.blit(new_image2, (430, 670))
+
 
 image3 = pygame.Surface((300, 300))
 image3.fill ((0,255,255))
@@ -61,12 +68,14 @@ pygame.draw.ellipse(image3, WHITE, (0,0,70,30), 0)
 new_image3 = pygame.transform.rotate(image3, 300)
 screen.blit(new_image3, (310, 620))
 
+
 image4 = pygame.Surface((300, 300))
 image4.fill ((0,255,255))
 image4.set_colorkey((0,255,255))
 pygame.draw.ellipse(image4, WHITE, (0,0,100,30), 0)
 new_image4 = pygame.transform.rotate(image4, 340)
 screen.blit(new_image4, (470, 660))
+
 
 #крылья и хвост
 x1 = 550
@@ -78,11 +87,9 @@ pygame.draw.polygon(screen, (255, 255, 255), [[x2,y2+100],[x2-10,y2],[x2-150,y2-
 pygame.draw.polygon(screen, (WHITE), [[420,590,],[320,540],[300,600],[410,610]],0)
 
 
-
 #клюв и когти
 pygame.draw.polygon(screen, (255, 255, 0), [[780,550],[850,545],[860,545],[850,565],[800,570]] , 0)
 pygame.draw.line(screen,(BLACK), (790,560), (857,550), 1)
-
 
 
 #рыба
